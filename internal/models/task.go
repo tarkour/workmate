@@ -6,13 +6,13 @@ import (
 )
 
 type Task struct {
-	ID         string
-	Status     string
-	CreatedAt  time.Time
-	StartedAt  time.Time
-	FinishedAt time.Time
-	Result     string // need?
-	Error      error  // need?
+	ID           string
+	Status       string
+	CreatedAt    time.Time
+	DurationTime time.Duration
+	// FinishedAt time.Time
+	// Result string // need?
+	// Error  error  // need?
 }
 
 type TaskStore struct {
