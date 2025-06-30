@@ -1,7 +1,6 @@
 package process
 
 import (
-	"math/rand"
 	"time"
 
 	"github.com/tarkour/workmate/internal/storage"
@@ -21,11 +20,11 @@ func ProcessImitation(taskID string) {
 	task.StartedAt = time.Now()
 	store.Unlock()
 
-	minDur := 3 * time.Minute
-	maxDur := 3 * time.Minute
-	duration := minDur + time.Duration(rand.Int63n(int64(maxDur-minDur)))
+	// minDur := 3 * time.Minute
+	// maxDur := 3 * time.Minute
+	// duration := minDur + time.Duration(rand.Int63n(int64(maxDur-minDur)))
 
-	time.Sleep(duration)
+	// time.Sleep(duration)
 
 	store.Lock()
 	defer store.Unlock()

@@ -1,1 +1,15 @@
 HTTP API app for long I/O bound tasks
+
+go run cmd/main.go
+
+server running on localhost:8080
+
+POST - localhost:8080/tasks
+GET - localhost:8080/tasks/:id
+DELETE - localhost:8080/tasks/:id
+
+for testing POST - send empty JSON with headers "application/json" - save id
+for testing GET - add saved id to url
+for testing DELETE - same as GET
+
+For process imitaion go to api/process/process.go and uncommend 23-27 lines
